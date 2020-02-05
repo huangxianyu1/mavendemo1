@@ -1,0 +1,30 @@
+body{
+background: #000000 url("../img/banner.jpg") repeat;
+}
+table{background-color: #333333;color:white;border-radius: 15px;width: 350px}
+form{position: relative;top:120px;
+}
+td{
+border-radius: 5px
+}
+tr{
+height: 35px
+}
+.bt{
+border-radius: 15px;
+	background-color: #333333;
+	color: white;
+}
+
+.input {
+	background-color: #333333;
+	border: 0px;
+	color: #FF7F00;
+	font-size: 14px
+}
+select {
+	background-color: #333333;
+	border: 0px;
+	color: #FF7F00;
+	font-size: 14px
+}

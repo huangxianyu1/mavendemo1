@@ -1,0 +1,35 @@
+body{
+	background: #000000 url("../img/banner.jpg") repeat;
+	}
+.li1 {
+	width: 100px;
+	align: center
+}
+
+.li2 {
+	width: 200px;
+	align: center
+}
+
+table {
+	background-color: #333333;
+	color: white;
+	border-radius: 10px;
+}
+td{
+border-radius: 5px
+}
+tr{
+height: 35px
+}
+a {
+	color: orange;
+	text-decoration: none
+}
+form{position: relative;top:120px;
+}
+input[type="button"] {
+border-radius: 15px;
+background-color: #333333;
+color:white;
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.IEmployeeMapper">
+	<insert id="addToEmployee" parameterType="com.bean.Employee">
+	insert into employee(ename,english,esex,etel,epartmentid,ejobid,eloginname,esalary,egoindate,fname) VALUES (#{ename},#{english},#{esex},#{etel},#{epartmentid},#{ejobid},#{eloginname},#{esalary},#{egoindate},#{fname})
+	</insert>
+	<insert id="addToLogin" parameterType="com.bean.Login">
+	insert into Login (lname,lpassword,lrootlevel,lquestion,lanswer) VALUES (#{lname},#{lpassword},#{lrootlevel},#{lquestion},#{lanswer})
+	</insert>
+	<update id="update" parameterType="com.bean.Employee">
+	update employee set english=#{english},fname=#{fname},esex=#{esex},etel=#{etel},epartmentid=#{epartmentid},ejobid=#{ejobid},esalary=#{esalary} where eid=#{eid}
+	</update>
+	<update id="reset" parameterType="com.bean.Login">
+	update login set lpassword=#{lpassword},lquestion=#{lquestion},lanswer=#{lanswer} where lname=#{lname}
+	</update>
+	<update id="updateLpassword" parameterType="com.bean.Login">
+	update login set lpassword=#{lpassword} where lname=#{lname}
+	</update>
+	<delete id="delByIdFromEm" parameterType="java.lang.String">
+	delete from employee where eid=#{eid}
+	</delete>
+	<delete id="delByIdFromLo" parameterType="java.lang.String">
+	delete from login where lid=#{lid}
+	</delete>
+	<select id="findById" parameterType="java.lang.String" resultType="com.bean.Employee">
+	select * from vwemp where eid=#{eid}
+	</select>
+	<select id="findByLname" parameterType="java.lang.String" resultType="com.bean.Login">
+	select * from login where lname=#{lname}
+	</select>
+	<select id="findByLid" parameterType="java.lang.String" resultType="com.bean.Employee">
+	select * from employee where eid=#{eid}
+	</select>
+	<select id="findAll" resultType="com.bean.Employee">
+	select * from vwemp order by eid
+	</select>
+	<select id="fmlg" resultType="com.bean.Login">
+	 select * from login
+	</select>
+	<select id="findPageAll" parameterType="com.bean.PageBean" resultType="com.bean.Employee">
+	select * from vwemp order by eid limit #{page},#{rows}
+	</select>
+	<select id="findMaxRows" resultType="Integer">
+	select count(*) from vwemp
+	</select>
+	<select id="dodep"  resultType="com.bean.Dpartment">
+		select * from dpartment  where 1=1 order by pid
+	</select>
+	<select id="dojob"  resultType="com.bean.Job">
+		select * from job  where 1=1 order by jid
+	</select>
+	<select id="findByEname" parameterType="java.lang.String" resultType="com.bean.Employee">
+		select * from employee  where ename=#{ename}
+	</select>
+	<select id="findByEid" parameterType="java.lang.String" resultType="com.bean.Employee">
+		select * from vwemp  where eid=#{eid}
+	</select>
+	<select id="findByElid" parameterType="java.lang.String" resultType="com.bean.Login">
+		select * from login  where lid=#{eid}
+	</select>
+</mapper>

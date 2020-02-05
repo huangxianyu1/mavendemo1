@@ -1,0 +1,70 @@
+body {
+background: #000000 url("../img/banner.jpg") repeat;
+}
+
+table {
+	background-color: #333333;
+	color: white;
+	border-radius: 15px;
+	width: 450px
+}
+
+form {
+	position: relative;
+	top: 120px;
+}
+
+td {
+	border-radius: 5px
+}
+
+tr {
+	height: 35px
+}
+
+.bt {
+	border-radius: 15px;
+	background-color: #333333;
+	color: white;
+}
+
+.input {
+	background-color: #333333;
+	border: 0px;
+	color: #FF7F00;
+	font-size: 14px
+}
+
+select {
+	background-color: #333333;
+	border: 0px;
+	color: #FF7F00;
+	font-size: 14px
+}
+
+a {
+	color: orange;
+	text-decoration: none;
+	font-size: 14px
+}
+
+span {
+	color: red;
+	font-size: 14px;
+}
+#uploadImg {
+	font-size: 12px;
+	overflow: hidden;
+	position: absolute;
+	bottom:px;
+}
+
+#file {
+	position: absolute;
+	z-index: 100;
+	margin-left: -180px;
+	font-size: 60px;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	margin-top: -5px;
+}
